@@ -6,6 +6,7 @@
 //
 
 import UserNotifications
+import REIOSSDK
 
 class NotificationService: UNNotificationServiceExtension {
 
@@ -16,11 +17,23 @@ class NotificationService: UNNotificationServiceExtension {
         self.contentHandler = contentHandler
         bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
         
-        if let bestAttemptContent = bestAttemptContent {
-            // Modify the notification content here...
-            bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
-            
-            contentHandler(bestAttemptContent)
+        let acceptAction = UNNotificationAction(identifier: "ACCEPT_ACTION",
+              title: "Accept", options: .foreground)
+        let declineAction = UNNotificationAction(identifier: "DECLINE_ACTION",
+              title: "Decline", options: .destructive)
+        
+        let meetingInviteCategory =
+              UNNotificationCategory(identifier: "MEETING_INVITATION1",
+              actions: [acceptAction, declineAction],
+              intentIdentifiers: [],
+              hiddenPreviewsBodyPlaceholder: "",
+              options: .customDismissAction)
+        
+        var categorySet: Set<UNNotificationCategory> = Set<UNNotificationCategory>();
+        categorySet.insert(meetingInviteCategory)
+        
+        REiosHandler.presentServiceExtension(request: request) { content in
+            contentHandler(content)
         }
     }
     

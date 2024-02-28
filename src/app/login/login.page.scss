@@ -1,0 +1,43 @@
+ion-content {
+  --background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Using viewport height to make it full screen vertically */
+  overflow: hidden; /* Disable scrolling */
+}
+
+.login-container {
+  max-width: 300px;
+  text-align: center;
+  width: 100%; /* Ensure the container takes full width */
+  position: fixed; /* Fix the container position */
+  top: 50%; /* Center the container vertically */
+  left: 50%; /* Center the container horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+}
+
+.login-title {
+  font-size: 1.5em;
+  margin-bottom: 20px; /* Add some space below the title */
+}
+
+ion-item {
+  --ion-item-background: #ffffff;
+  --ion-item-border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+ion-button {
+  margin-top: 20px;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+
+  a {
+    color: #3880ff;
+    text-decoration: none;
+  }
+}

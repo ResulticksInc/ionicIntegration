@@ -1,0 +1,18 @@
+.custom-list {
+    // Add your custom styles here
+    background-color: #f0f0f0; // Change the background color
+    padding: 10px; 
+    height: 100%; // Set the height of .custom-list to 100% of its parent's height
+    // Add some padding
+  }
+  ion-item {
+    // Styles for ion-item
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  ion-icon {
+    // Styles for ion-icon
+    margin-right: 10px; // Add margin to the right of the icon
+  }

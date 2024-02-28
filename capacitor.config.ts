@@ -5,8 +5,15 @@ const config: CapacitorConfig = {
   appName: 'IonicIntegration',
   webDir: 'www',
   server: {
-    androidScheme: 'https'
-  }
+    androidScheme: 'https',
+    iosScheme: 'http://192.168.0.105:8100'
+
+  },
+  plugins: {
+    PushNotifications: {
+      presentationOptions: ["badge", "sound", "alert"],
+    },
+  },
 };
 
 export default config;

@@ -3,18 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>NSExtension</key>
-	<dict>
-		<key>NSExtensionAttributes</key>
-		<dict>
-			<key>UNNotificationExtensionCategory</key>
-			<string>myNotificationCategory</string>
-			<key>UNNotificationExtensionInitialContentSizeRatio</key>
-			<real>1</real>
-		</dict>
-		<key>NSExtensionMainStoryboard</key>
-		<string>MainInterface</string>
-		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.usernotifications.content-extension</string>
-	</dict>
+    <dict>
+        <key>NSExtensionAttributes</key>
+        <dict>
+            <key>UNNotificationExtensionCategory</key>
+            <string>Resul</string>
+            <key>UNNotificationExtensionDefaultContentHidden</key>
+            <true/>
+            <key>UNNotificationExtensionInitialContentSizeRatio</key>
+            <integer>1</integer>
+            <key>UNNotificationExtensionUserInteractionEnabled</key>
+            <true/>
+        </dict>
+        <key>NSExtensionMainStoryboard</key>
+        <string>MainInterface</string>
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.usernotifications.content-extension</string>
+    </dict>
 </dict>
 </plist>

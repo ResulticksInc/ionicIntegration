@@ -1,0 +1,22 @@
+<ion-content class="ion-padding">
+  <!-- Your content here -->
+    <div class="login-container">
+    <h1 class="login-title">Sample App</h1>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" name="email" [(ngModel)]="loginForm.email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="loginForm.password" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" color="primary" (click)="login()">Login</ion-button>
+
+    <div class="signup-link">
+      <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Inbox
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="notifications" class="notification-icon" (click)="navigateTo('inbox')"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+ <ion-content>
+  <div class="notification-container">
+    <div *ngFor="let notification of notificationList; let i = index" class="dynamicDiv">
+      <p>{{ notification.title }}</p>
+      <p>{{ notification.body }}</p>
+      <ion-img [src]="notification.url" class="notification-image"></ion-img>
+      <div class="buttonDiv">
+        <ion-button (click)="readNotification(i)">Read</ion-button>
+        <ion-button (click)="markUnread(i)">Unread</ion-button>
+        <ion-button (click)="deleteNotification(i)">Delete</ion-button>
+      </div>
+    </div>
+  </div>
+
+</ion-content> 
+

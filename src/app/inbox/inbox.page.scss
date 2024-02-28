@@ -1,0 +1,45 @@
+.notification-icon {
+  font-size: 24px;
+  color: #ff9900;
+  margin-right: 10px;
+  /* Add any other styling you want */
+}
+
+
+ion-content {
+  --background: #3498db;
+}
+ion-content .dynamicDiv {
+  border: 1px solid #b02323;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+ion-content .dynamicDiv p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  /* Add any other styling you want for paragraphs */
+}
+
+ion-content .dynamicDiv .notification-image {
+  width: 100%;
+  height: auto; /* This will maintain the aspect ratio */
+  max-height: 100%; /* Set a maximum height if needed */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  /* Add any other styling you want for the notification image */
+}
+
+ion-content .dynamicDiv .buttonDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+ion-content .dynamicDiv .buttonDiv ion-button {
+  flex-grow: 1;
+  margin-right: 10px;
+  /* Add any other styling you want for buttons */
+}
